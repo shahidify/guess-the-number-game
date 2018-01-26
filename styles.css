@@ -1,0 +1,45 @@
+body {
+  font-size: 16px;
+}
+
+.heading-section {
+  text-align: center;
+  background-color: #f1f4f5;
+}
+
+#btn-replay {
+  display: none;
+}
+#user-input {
+  margin-bottom: 10px;
+}
+.guess-box {
+  padding: 25px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.4);
+}
+
+.msg-sucess {
+  color: green;
+  font-size: 200%;
+}
+.main {
+  text-align: center;
+  min-height: 300px;
+}
+.instructions{
+  background-color: #ebefed;
+  padding: 5px;
+}
+
+th {
+  font-weight: bold;
+  text-align: center;
+}
+
+
+
+
+
+
+
