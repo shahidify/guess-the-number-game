@@ -7,13 +7,10 @@ function checkNumber() {
   var msg = document.getElementById("msg");
   var results = document.getElementById("results");
 
-  console.log(userInput);  
-
   if(!answer) {
     answer = generateRandomAnswer();
     document.getElementById("answer").value = answer;
   }
-  console.log(answer);
   
   if(!attempt){
     attempt = 0;
@@ -29,12 +26,10 @@ function checkNumber() {
   }
 
   // Main Logic
-  var correctDigit = 0;
   var html = '<tr><td>' + userInput + '</td><td>'
   for(let i=0; i < userInput.length; i++) {
     if(userInput[i] == answer[i]) {
       html = html + '<i class="fa fa-check text-success" style="padding: 3px;"></i>';
-      correctDigit++;
     } else if(answer.indexOf(userInput[i]) > -1) {
       // show Exchange icon
       html = html + '<i class="fa fa-exchange text-warning" style="padding: 3px;"></i>';
@@ -46,7 +41,7 @@ function checkNumber() {
   html = html + '</td></tr>';
   results.innerHTML += html;
   
-  if(correctDigit === userInput.length) {
+  if(answer === userInput) {
     //User is a winner
     msg.innerHTML = "<p class='msg-sucess'>Wooohhooo, You are a born Winner </p>";
     document.getElementById("btn-guess").style = "display:none;";
